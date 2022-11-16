@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,34 +10,37 @@ namespace Nasljedivanje3
     {
         bool opadajuListovi;
         public bool OpadajuListovi { get => opadajuListovi; set => opadajuListovi = value; }
-        public void Stablo(bool OL)
+        public Bilijka(bool oL)
         {
-            this.OpadajuListovi = OL;
+            this.OpadajuListovi = oL;
         }
     }
     class Stablo : Bilijka
     {
-        
+        public Stablo(bool oL) : base(oL)
+        {
+            this.OpadajuListovi = oL;
+        }
     }
     class Cvijet : Bilijka
     {
-        public Cvijet(bool OL)
+        public Cvijet(bool oL) : base(oL)
         {
-            this.OpadajuListovi = OL;
+            this.OpadajuListovi = oL;
         }
-}
+    }
     class Bijelogoricno : Stablo
     {
-        public Bijelogoricno(bool OL)
+        public Bijelogoricno(bool oL) : base(true)
         {
-            this.OpadajuListovi = OL;
+            this.OpadajuListovi = oL;
         }
     }
     class Crnogoricno : Stablo
     {
-        public Crnogoricno(bool OL)
+        public Crnogoricno(bool oL) : base(false)
         {
-            this.OpadajuListovi = OL;
+            this.OpadajuListovi = oL;
         }
     }
     internal class Program
